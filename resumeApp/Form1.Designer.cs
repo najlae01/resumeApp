@@ -27,18 +27,16 @@
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+        { 
             this.panelMenu = new System.Windows.Forms.Panel();
             this.butCoverLetters = new System.Windows.Forms.Button();
             this.butResumes = new System.Windows.Forms.Button();
             this.butCvs = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.labelTitleBar = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +52,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(261, 611);
             this.panelMenu.TabIndex = 0;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // butCoverLetters
             // 
@@ -73,7 +70,7 @@
             this.butCoverLetters.Text = "Cover Letters";
             this.butCoverLetters.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.butCoverLetters.UseVisualStyleBackColor = true;
-            this.butCoverLetters.Click += new System.EventHandler(this.button3_Click);
+            this.butCoverLetters.Click += new System.EventHandler(this.butCoverLetters_Click);
             // 
             // butResumes
             // 
@@ -94,7 +91,7 @@
             this.butResumes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.butResumes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.butResumes.UseVisualStyleBackColor = true;
-            this.butResumes.Click += new System.EventHandler(this.button2_Click);
+            this.butResumes.Click += new System.EventHandler(this.butResumes_Click);
             // 
             // butCvs
             // 
@@ -115,25 +112,18 @@
             this.butCvs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.butCvs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.butCvs.UseVisualStyleBackColor = true;
-            this.butCvs.Click += new System.EventHandler(this.button1_Click_1);
+            this.butCvs.Click += new System.EventHandler(this.butCvs_Click);
             // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panelLogo.Controls.Add(this.panel1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(261, 80);
             this.panelLogo.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(12, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 125);
-            this.panel1.TabIndex = 1;
+            this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // panelTitleBar
             // 
@@ -142,8 +132,9 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(261, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(788, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(921, 80);
             this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             // 
             // labelTitleBar
             // 
@@ -158,31 +149,30 @@
             this.labelTitleBar.TabIndex = 0;
             this.labelTitleBar.Text = "Home";
             this.labelTitleBar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelTitleBar.Click += new System.EventHandler(this.label1_Click);
+            this.labelTitleBar.Click += new System.EventHandler(this.labelTitleBar_Click);
             // 
-            // panel2
+            // panelDesktop
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.BackgroundImage = global::resumeApp.Properties.Resources.backg;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(261, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(788, 531);
-            this.panel2.TabIndex = 2;
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(47)))));
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(261, 80);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(921, 531);
+            this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // libraries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 611);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1182, 611);
+            this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "libraries";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
@@ -190,15 +180,15 @@
         }
 
         #endregion
-
+      
         private Panel panelMenu;
         private Panel panelLogo;
-        private Panel panel1;
         private Button butCvs;
         private Button butCoverLetters;
         private Button butResumes;
         private Panel panelTitleBar;
         private Label labelTitleBar;
-        private Panel panel2;
-    }
+        private Panel panelDesktop;
+      
+    } 
 }

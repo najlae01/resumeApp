@@ -12,14 +12,31 @@ namespace resumeApp.Forms.cvForms
 {
     public partial class personelInfo : Form
     {
+
+        public TextBox textField;
+
         public personelInfo()
         {
             InitializeComponent();
         }
 
+        private void ClearFieldText(object textSender, EventArgs e)
+        {
+            if(textSender != null)
+            {
+                MessageBox.Show("works");
+                if(textField == (TextBox)textSender)
+                {
+                    textField.Click += (textSender, e) => {
+                        textField.Clear();
+                    };
+                }
+            }
+        }
+
         private void name_TextChanged(object sender, EventArgs e)
         {
-
+            ClearFieldText(sender, e);
         }
 
         private void address_TextChanged(object sender, EventArgs e)
@@ -44,7 +61,7 @@ namespace resumeApp.Forms.cvForms
 
         private void nextBtn_Click(object sender, EventArgs e)
         {
-
+  
         }
     }
 }

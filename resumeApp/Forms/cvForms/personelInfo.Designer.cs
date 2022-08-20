@@ -46,12 +46,13 @@
             this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.name.BackColor = System.Drawing.Color.WhiteSmoke;
             this.name.ForeColor = System.Drawing.Color.DarkGray;
-            this.name.Location = new System.Drawing.Point(212, 69);
+            this.name.Location = new System.Drawing.Point(212, 84);
             this.name.Multiline = true;
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(505, 35);
             this.name.TabIndex = 0;
             this.name.Text = "e.g. James Smith";
+            this.name.Click += new System.EventHandler(this.name_Click);
             this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // address
@@ -59,12 +60,13 @@
             this.address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.address.BackColor = System.Drawing.Color.WhiteSmoke;
             this.address.ForeColor = System.Drawing.Color.DarkGray;
-            this.address.Location = new System.Drawing.Point(212, 152);
+            this.address.Location = new System.Drawing.Point(212, 167);
             this.address.Multiline = true;
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(505, 35);
             this.address.TabIndex = 4;
             this.address.Text = "e.g. Av 12 Rue 25 Paris";
+            this.address.Click += new System.EventHandler(this.address_Click);
             this.address.TextChanged += new System.EventHandler(this.address_TextChanged);
             // 
             // email
@@ -72,12 +74,13 @@
             this.email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.email.BackColor = System.Drawing.Color.WhiteSmoke;
             this.email.ForeColor = System.Drawing.Color.DarkGray;
-            this.email.Location = new System.Drawing.Point(212, 231);
+            this.email.Location = new System.Drawing.Point(212, 246);
             this.email.Multiline = true;
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(505, 35);
             this.email.TabIndex = 5;
             this.email.Text = "e.g. james.smith@gmail.com";
+            this.email.Click += new System.EventHandler(this.email_Click);
             this.email.TextChanged += new System.EventHandler(this.email_TextChanged);
             // 
             // phone
@@ -85,12 +88,13 @@
             this.phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.phone.BackColor = System.Drawing.Color.WhiteSmoke;
             this.phone.ForeColor = System.Drawing.Color.DarkGray;
-            this.phone.Location = new System.Drawing.Point(212, 318);
+            this.phone.Location = new System.Drawing.Point(212, 333);
             this.phone.Multiline = true;
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(505, 35);
             this.phone.TabIndex = 6;
             this.phone.Text = "e.g. 06 45 67 43 35";
+            this.phone.Click += new System.EventHandler(this.phone_Click);
             this.phone.TextChanged += new System.EventHandler(this.phone_TextChanged);
             // 
             // status
@@ -98,12 +102,13 @@
             this.status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.status.BackColor = System.Drawing.Color.WhiteSmoke;
             this.status.ForeColor = System.Drawing.Color.DarkGray;
-            this.status.Location = new System.Drawing.Point(212, 400);
+            this.status.Location = new System.Drawing.Point(212, 415);
             this.status.Multiline = true;
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(505, 35);
             this.status.TabIndex = 7;
             this.status.Text = "e.g. Célibataire";
+            this.status.Click += new System.EventHandler(this.status_Click);
             this.status.TextChanged += new System.EventHandler(this.status_TextChanged);
             // 
             // nextBtn
@@ -114,7 +119,7 @@
             this.nextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextBtn.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.nextBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nextBtn.Location = new System.Drawing.Point(717, 454);
+            this.nextBtn.Location = new System.Drawing.Point(751, 461);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(139, 47);
             this.nextBtn.TabIndex = 8;
@@ -197,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(47)))));
-            this.ClientSize = new System.Drawing.Size(877, 523);
+            this.ClientSize = new System.Drawing.Size(902, 538);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.phoneLabel);
             this.Controls.Add(this.emailLabel);

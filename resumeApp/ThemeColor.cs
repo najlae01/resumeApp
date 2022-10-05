@@ -214,7 +214,6 @@ namespace resumeApp
                 green = (255 - green) * correctionfactor + green;
                 blue = (255 - blue) * correctionfactor + blue;
             }
-
             return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
         }
     }
